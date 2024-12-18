@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+
+  <head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href = "stylesheets/style.css" rel = "stylesheet">
+    <link href = "stylesheets/Font_Awesome_Icons/css/all.css" rel = "stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+  </head>
+  
+  <header>
+
+    <div class = "header_content">
+
+      <div class = "image_container">
+
+        <img src = "assets/logo.png"/>
+
+      </div>
+
+      <div class = "menu_container">
+
+        <i class = "fa fa-bars" id = "menu_icon"></i>
+
+      </div>
+
+      <div class = "popout_menu" id = "popout_menu"></div>
+
+    </div>
+
+    <div class = "border"></div>
+
+  </header>
+
+
+  <main>
+
+    <p class = "page_title">About Emma</p>
+
+    <div class = "quote_container">
+
+      <div class = "quote_text">
+
+        <i class = "fa fa-quote-left"></i><p class = "quote">My love of acupuncture originally stemmed from the personal benefit I received. My passion is fuelled by the wonderful people I continue to treat. It is a beautiful, safe system of medicine that everyone should try.</p><i class = "fa fa-quote-right"></i>
+
+      </div> 
+
+    </div>
+
+    <div class = "content">
+
+      <img src = "assets/emma.jpg"/>
+
+      <p class = "content_text">Content Text</p>
+
+    </div>
+
+
+  </main>
+
+  <footer>
+
+    <div class = "border"></div>
+
+    <div class = "footer_content">
+
+      <div class = "footer_image_container_BAcC">
+        
+        <img src = "assets/BAcC.png">
+      
+      </div>
+      
+      <div class = "footer_image_container_Accredited">
+
+        <img src = "assets/Accredited-Registers.png">
+
+    </div>
+
+  </footer>
+
+</html>
+
+<script>
+  document.getElementById("menu_icon").addEventListener("click", toggleMenu);
+
+  function toggleMenu() {
+
+    const popoutMenu = document.getElementById("popout_menu");
+    const menuIcon = document.getElementById("menu_icon");
+
+    if (popoutMenu.style.left === "0vw") {
+      
+      popoutMenu.style.left = "100vw";
+      menuIcon.classList.remove("fa-times");
+      menuIcon.classList.add("fa-bars");
+
+    }
+    
+    else {
+
+      popoutMenu.style.left = "0vw";
+      menuIcon.classList.remove("fa-bars");
+      menuIcon.classList.add("fa-times");
+
+    }
+  }
+</script>
