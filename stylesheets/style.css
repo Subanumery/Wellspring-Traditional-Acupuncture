@@ -135,13 +135,12 @@ header {
 
   main .content .content_text p {
     margin: 0 0 1.5rem 0;
-
   }
 
   footer {
     display: flex;
     flex-direction: column;
-    position: fixed;
+    position: relative;
     align-items: center;
     justify-content: center;
     bottom: 0;
@@ -176,6 +175,8 @@ header {
   footer .footer_content .footer_image_container_BAcC img,
   footer .footer_content .footer_image_container_Accredited img {
     max-width: 100%;
+    height: auto;
+    width: auto;
   }
 
 }
