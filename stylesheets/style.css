@@ -1,8 +1,7 @@
 html {
-  color: gray;
+  color: #3c645a;
   font-weight: 100;
   font-size: 20px;
-  overflow: hidden;
 }
 
 body {
@@ -20,76 +19,79 @@ header {
 
 @media only screen and (max-width: 520px) {
 
-  body {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+  * {
+    box-sizing: border-box;
   }
 
   .border {
-    background-image: linear-gradient(#03fec0, #3c87ba);
+    background-image: linear-gradient(rgba(3, 254, 192,0.85), rgba(60, 135, 186, 0.85));
     height: 5px;
     width: 100%;
   }
 
-  header .border {
-    position: absolute;
-    bottom: 0;
+  header .border{
+    height: 5px;
   }
 
   footer .border {
     position: absolute;
     top: 0;
-
   }
 
   header {
-    height: 100px;
+    margin: 0;
+    padding: 0;
+    height: 120px;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-between;
+    background-color: white;
   }
 
   header .header_content {
-    max-height: 85%;
     width: 100%;
+    height: 95%;
     display: flex;
-    flex-direction: row;
-    align-items: center;    
-  }
-  
-  header .header_content .menu_container {
-    width: 30%;
-    height: 60px;
-    display: flex;
-    font-size: 2rem;
-    z-index: 2;
-    color: #16c0ba;
-    margin: 10px 10px 5px 10px;
-    align-items: center;
-    justify-content: center;
+    align-content: center;
+    justify-content: space-between;
   }
 
   header .header_content .image_container {
     display: flex;
-    width: 100%;
-    height: 85%;
-    margin: 1rem 0.5rem 1rem 1rem;
-    align-content: center;
-    justify-content: center;
+    max-height: 100%;
+    width: 75%;
+
+    margin: 0.5rem 0.5rem 0.5rem 1rem;
   }
 
   header .header_content .image_container img {
-    object-fit: contain;
-    max-width: 100%;
     max-height: 100%;
+    max-width: 100%;
+    height: auto;
+    width: auto;
   }
 
-  .popout_menu {
+  header .header_content .menu_container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    flex-grow: 1;
+    font-size: 2.25rem;
+    color: rgba(22, 192, 186, 0.85);
+    padding: 1rem 1rem 0.5rem 0.5rem;
+  }
+
+  header .header_content .menu_container i {
+    position: relative;
+    z-index: 11;
+  }
+
+  header .header_content .popout_menu {
     position: absolute;
-    z-index: 1;
+    z-index: 10;
     top: 0;
     left: 100vw;
     height: 100vh;
@@ -99,8 +101,10 @@ header {
   }
 
   main {
+    box-sizing: border-box;
     position: relative;
-    top: 40vw;
+    top: 100px;
+    padding: 0 0 100px 0;
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -109,26 +113,28 @@ header {
   }
 
   main .page_title {
-    font-size: 2.5rem;
-    margin: 1rem;
+    font-size: 2rem;
+    margin: 1.25rem;
   }
 
   main .quote_container {
     display: flex;
     align-items: center;
-    overflow: hidden;
-    padding: 1rem;
-    background-color: #16c0ba;
-    color: black;
+    padding: 1rem 1.5rem;
+    background-color: rgba(22, 192, 186, 0.85);
   }
 
   main .content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 1rem;
-    width: 100%;
-    border: 1px solid red;
+    margin: 0 auto;
+  }
+
+  main .content img {
+    margin: 0.5rem 0.5rem 0.25rem 0.5rem;
+  }
+
+  main .content .content_text {
+    text-align: center;
+    margin: 0.25rem 1.5rem;
   }
 
   footer {
@@ -138,8 +144,9 @@ header {
     align-items: center;
     justify-content: center;
     bottom: 0;
-    height: 5rem;
+    height: 100px;
     width: 100%;
+    background-color: white;
   }
 
   footer .footer_content {
