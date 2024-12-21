@@ -38,7 +38,19 @@
 
     <div class = "quote_container">
 
-        <i class = "fa fa-quote-left"></i><p class = "quote">My love of acupuncture originally stemmed from the personal benefit I received. My passion is fuelled by the wonderful people I continue to treat. It is a beautiful, safe system of medicine that everyone should try.</p><i class = "fa fa-quote-right"></i>
+      <div class = "quote_sign_left">
+
+        <i class = "fa fa-quote-left"></i>
+        
+      </div>
+      
+      <p class = "quote">My love of acupuncture originally stemmed from the personal benefit I received. My passion is fuelled by the wonderful people I continue to treat. It is a beautiful, safe system of medicine that everyone should try.</p>
+      
+      <div class = "quote_sign_right">
+
+        <i class = "fa fa-quote-right"></i>
+        
+      </div>
 
     </div>
 
@@ -98,9 +110,9 @@
     const popoutMenu = document.getElementById("popout_menu");
     const menuIcon = document.getElementById("menu_icon");
 
-    if (popoutMenu.style.left === "0vw") {
+    if (popoutMenu.style.left === "0%") {
       
-      popoutMenu.style.left = "100vw";
+      popoutMenu.style.left = "100%";
       menuIcon.classList.remove("fa-times");
       menuIcon.classList.add("fa-bars");
 
@@ -108,7 +120,7 @@
     
     else {
 
-      popoutMenu.style.left = "0vw";
+      popoutMenu.style.left = "0%";
       menuIcon.classList.remove("fa-bars");
       menuIcon.classList.add("fa-times");
 
