@@ -33,7 +33,6 @@ header, footer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: white;
   max-width: 1500px;
   max-height: 200px;
   width: 100%;
@@ -46,11 +45,13 @@ header {
 }
 
 footer {
+  background-color: white;
   position: static;
   height: 100px;
 }
 
 .header_content {
+  background-color: white;
   margin: 0 auto;
   display: flex;
   align-content: center;
@@ -176,7 +177,9 @@ img {
     left: 100%;
     height: 100vh;
     width: 100vw;
+    padding: 120px 0;
     background-color: white;
+    overflow: scroll;
     transition: all 300ms ease-in-out;
   }
 
