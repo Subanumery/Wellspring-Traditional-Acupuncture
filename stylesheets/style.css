@@ -9,16 +9,17 @@ html {
 }
 
 .border {
+  position: relative;
   background-image: linear-gradient(rgba(3, 254, 192,0.85), rgba(60, 135, 186, 0.85));
   max-width: 1600px;
+  min-height: 5px;
   width: 100%;
   height: 5px;
 }
 
-.border_grey {
-  background-color: lightgray;
-  width: 80%;
-  min-height: 2px;
+header .border {
+  z-index: 100;
+
 }
 
 body {
@@ -29,6 +30,7 @@ body {
 }
 
 header, footer {
+  background-color: white;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -45,25 +47,19 @@ header {
 }
 
 footer {
-  background-color: white;
   position: static;
   height: 100px;
 }
 
 .header_content {
-  background-color: white;
-  margin: 0 auto;
   display: flex;
-  align-content: center;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 1000px;
-  height: 95%;
-}
-
-.header_content, header .border {
   position: relative;
   z-index: 300;
+  align-content: center;
+  justify-content: space-between;
+  max-width: 1000px;
+  height: 115px;
+  width: 100%;
 }
 
 .image_container_logo {
@@ -85,6 +81,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 0 1rem 0;
 }
 
 .page_title {
@@ -170,29 +167,26 @@ img {
 
   .popout_menu {
     display: flex;
-    position: fixed;
-    z-index: 100;
-    top: 0;
-    align-items: center;
-    left: 100%;
-    height: 100vh;
-    width: 100vw;
-    padding: 50px;
-    background-color: white;
-    overflow: scroll;
-    transition: all 300ms ease-in-out;
-  }
-
-  .popout_menu_content {
-    position: relative;
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    height: 75%;
-    width: 500px;
-    font-size: 1.25rem;
+    position: fixed;
+    z-index: 100;
+    left: 100%;
+    max-height: calc(100vh - 220px);
+    width: 100%;
+    height: 100vh;
+    margin: 120px 0 0 0;
+    transition: all 300ms ease-in-out;
+    background-color: white;
   }
+  
+  .border_grey {
+    width: 60%;
+    min-height: 2px;
+    background-color: lightgray;
+  }
+
 
   .sticky-footer {
     position: sticky;
