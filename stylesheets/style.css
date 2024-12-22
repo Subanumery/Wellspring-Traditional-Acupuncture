@@ -177,7 +177,7 @@ img {
     left: 100%;
     height: 100vh;
     width: 100vw;
-    padding: 120px 0;
+    padding: 50px;
     background-color: white;
     overflow: scroll;
     transition: all 300ms ease-in-out;
@@ -190,7 +190,6 @@ img {
     align-items: center;
     justify-content: space-around;
     height: 75%;
-    padding: 50px;
     width: 500px;
     font-size: 1.25rem;
   }
