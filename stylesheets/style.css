@@ -2,31 +2,36 @@
   box-sizing: border-box;
 }
 
+:root {
+  --text-color: rgba(60, 100, 90, 1);
+  --background-color: rgba(255, 255, 255, 1);
+  --highlight-blue: rgba(22, 192, 186, 0.85);
+  --header-height: 120px;
+  --footer-height: 100px;
+  --gradient-border-height: 5px;
+}
+
 html {
-  color: #3c645a;
+  color: var(--text-color);
   font-size: 20px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
   overflow-x: hidden;
 }
 
 .border {
   position: relative;
   background-image: linear-gradient(rgba(3, 254, 192,0.85), rgba(60, 135, 186, 0.85));
+  min-height: var(--gradient-border-height);
   max-width: 1600px;
-  min-height: 5px;
   width: 100%;
-  height: 5px;
-}
-
-header .border {
-  z-index: 100;
-
+  height: var(--gradient-border-height);
 }
 
 body {
-  margin: 0 auto;
+  margin: 0;
+  padding: 0;
   background-color: white;
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 header, footer {
@@ -43,83 +48,82 @@ header, footer {
 header {
   position: sticky;
   top: 0;
-  height: 120px;
+  z-index: 300;
+  height: var(--header-height);
 }
 
 footer {
   position: static;
-  height: 100px;
+  height: var(--footer-height);
 }
 
 .header_content {
   display: flex;
   position: relative;
-  z-index: 300;
-  align-content: center;
   justify-content: space-between;
   max-width: 1000px;
-  height: 115px;
+  height: calc(var(--header-height) - var(--gradient-border-height));
   width: 100%;
 }
 
 .image_container_logo {
   display: flex;
   align-items: center;
-  max-height: 100%;
+  max-height: 90%;
   margin: 0.5rem 0.5rem 0.5rem 1rem;
 }
 
 header i {
   align-self: center;
-  font-size: 2.25rem;
-  color: rgba(22, 192, 186, 0.85);
   min-width: 45px;
   margin: 1rem 1rem 0.5rem 0.5rem;
+  font-size: 2.25rem;
+  color: var(--highlight-blue);
 }
 
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 0 1rem 0;
+  padding: 1rem 0 1rem 0;
 }
 
 .page_title {
   font-size: 2rem;
+  padding: 0 1.5rem 0 1.5rem;
 }
 
 .quote_container {
   display: flex;
+  justify-content: center;
   min-height: 240px;
   max-width: 800px;
-  background-color: rgba(22, 192, 186, 0.85);
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  background-color: var(--highlight-blue);
 }
 
 .quote {
   align-self: center;
-  padding: 0.25rem;
+  padding: 0.5rem;
 }
 
 .quote_sign_left, .quote_sign_right {
-  color: white;
-  font-size: 1.5rem;
   display: flex;
   flex-direction: column;
-  min-height: 100%;
+  font-size: 1.5rem;
+  color: var(--background-color);
 }
 
 .quote_sign_left {
   justify-content: flex-start;
-  padding: 0.75rem 0.25rem 0 1rem;
 }
 
 .quote_sign_right {
   justify-content: flex-end;
-  padding: 0 1rem 0.75rem 0.25rem;
 }
 
 .content img {
-  margin: 2rem 0;
+  margin: 2rem 0 2rem 0;
 }
 
 .content_text p {
@@ -168,30 +172,36 @@ img {
   .popout_menu {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    justify-content: space-around;
     position: fixed;
-    z-index: 100;
+    z-index: 150;
     left: 100%;
-    min-width: 100%;
-    max-height: calc(100vh - 220px);
-    height: 100vh;
-    margin: 120px 0 0 0;
-    padding: 1.5rem;
-    transition: all 300ms ease-in-out;
-    background-color: white;
-    overflow-y: scroll;
+    width: 100%;
+    height: calc(100vh - calc(var(--header-height) + var(--footer-height)));
+    margin: var(--header-height) 0 0 0;
+    padding: 3rem 1.5rem 3rem 1.5rem;
+    font-size: 1.25rem;
+    transition: left 300ms ease-in-out;
+    background-color: var(--background-color);
+    overflow-y: auto;
+
+    border: 1px solid red;
   }
-  
+
+  .noscroll {
+    overflow: hidden;
+    max-height: 100vh;
+  }
+    
   .border_grey {
     width: 60%;
     min-height: 2px;
     background-color: lightgray;
   }
 
-
-  .sticky-footer {
-    position: sticky;
+  .sticky_footer {
+    position: fixed;
     bottom: 0;
     z-index: 301;
   }
