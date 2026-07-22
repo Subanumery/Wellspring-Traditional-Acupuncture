@@ -81,6 +81,30 @@ header i {
   color: var(--highlight-blue);
 }
 
+.popout_menu {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 150;
+  width: 100%;
+  padding: 1rem 1.5rem 1rem 1.5rem;
+  font-size: 1.25rem;
+  background-color: var(--background-color);
+  }
+
+.border_grey {
+  min-width: 2px;
+  min-height: 60%;
+  margin: 0rem 1rem;
+  background-color: lightgray;
+  }
+
+.menu_icon {
+  visibility: hidden;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -90,7 +114,7 @@ main {
 
 .page_title {
   font-size: 2rem;
-  padding: 0 1.5rem 0 1.5rem;
+  padding: calc(var(--header-height) + 1rem) 1.5rem 0 1.5rem;
 }
 
 .quote_container {
@@ -162,7 +186,7 @@ img {
   max-width: 100%;
 }
 
-@media only screen and (max-width: 520px) {
+@media only screen and (max-width: 1250px) {
 
   .header_content {
     justify-content: space-between;
@@ -186,7 +210,6 @@ img {
     transition: left 300ms ease-in-out;
     background-color: var(--background-color);
     overflow-y: auto;
-    
   }
 
   .menu_option {
@@ -202,6 +225,10 @@ img {
     width: 60%;
     min-height: 2px;
     background-color: lightgray;
+  }
+  .page_title {
+    font-size: 2rem;
+    padding: 1rem 1.5rem 0 1.5rem;
   }
 
   .sticky_footer {
