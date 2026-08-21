@@ -152,6 +152,7 @@ main {
 
 .content_text p {
   margin: 0 1.5rem 1.5rem 1.5rem;
+  max-width: 800px;
 }
 
 .footer_content {
@@ -226,6 +227,7 @@ img {
     min-height: 2px;
     background-color: lightgray;
   }
+
   .page_title {
     font-size: 2rem;
     padding: 0 1.5rem 0 1.5rem;
