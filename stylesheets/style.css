@@ -170,6 +170,11 @@ main {
   height: 95%;
 }
 
+footer {
+  align-items: center;
+
+}
+
 .footer_image_container_BAcC,
 .footer_image_container_Accredited {
   display: flex;
