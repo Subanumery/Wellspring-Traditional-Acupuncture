@@ -6,6 +6,7 @@
   --text-color: rgba(60, 100, 90, 1);
   --background-color: rgba(255, 255, 255, 1);
   --highlight-blue: rgba(22, 192, 186, 0.85);
+  --light-blue: rgba(3, 254, 192,0.85);
   --header-height: 160px;
   --footer-height: 100px;
   --gradient-border-height: 5px;
@@ -115,12 +116,12 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem 0 1rem 0;
+  padding: calc(var(--header-height)) 0 0 0;
 }
 
 .page_title {
   font-size: 2rem;
-  padding: calc(var(--header-height) - 1rem) 1.5rem 0 1.5rem;
+  padding: 0 1.5rem 0 1.5rem;
 }
 
 .quote_container {
@@ -128,8 +129,9 @@ main {
   justify-content: center;
   min-height: 240px;
   max-width: 850px;
-  padding: 0.5rem 1rem 0.5rem 1rem;
+  padding: 1rem 1rem 1rem 1rem;
   background-color: var(--highlight-blue);
+  box-shadow: 0 0 10px var(--highlight-blue);
 }
 
 .quote {
@@ -141,7 +143,7 @@ main {
   display: flex;
   flex-direction: column;
   font-size: 1.5rem;
-  color: var(--background-color);
+  color:white;
 }
 
 .quote_sign_left {
@@ -152,12 +154,8 @@ main {
   justify-content: flex-end;
 }
 
-.content img {
-  margin: 2rem 0 2rem 0;
-}
-
 .content_text p {
-  margin: 0 1.5rem 1.5rem 1.5rem;
+  margin: 2.5rem 1.5rem 1.5rem 1.5rem;
   max-width: 800px;
 }
 
@@ -183,11 +181,13 @@ footer {
 }
 
 .footer_image_container_BAcC {
+  display: inline-block;
   justify-content: flex-start;
   margin: 0.75rem 0.5rem 0.75rem 1rem;
 }
 
 .footer_image_container_Accredited {
+  display: inline-block;
   justify-content: flex-end;
   margin: 0.75rem 1rem 0.75rem 0.5rem;
 }
@@ -244,9 +244,13 @@ img {
   }
     
   .border_grey {
-    width: 60%;
+    width: 30%;
     min-height: 2px;
     background-color: lightgray;
+  }
+
+  main {
+    padding: 1.5rem 0 0 0;
   }
 
   .page_title {
