@@ -33,12 +33,3 @@ document.getElementById("menu_icon").addEventListener("click", toggleMenu);
       }
     }
   }
-
-fetch("header.html")
-  .then(response => response.text())
-  .then(header => {
-      document.getElementById("header").innerHTML = header;
-  })
-  .catch(error => {
-      console.error("Error loading header:", error);
-  });
