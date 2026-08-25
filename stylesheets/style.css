@@ -89,6 +89,7 @@ footer {
   z-index: 300;
   height: var(--footer-height);
   justify-self: center;
+  align-items: center;
   margin: 0 auto;
   padding: 0;
 }
