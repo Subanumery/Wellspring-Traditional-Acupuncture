@@ -322,7 +322,6 @@ img {
 
   .noscroll {
     overflow-y: hidden;
-    max-height: 100vh;
   }
 
   .border_grey {
