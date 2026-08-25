@@ -229,7 +229,6 @@ main {
   max-width: 800px;
   padding: 0 var(--general-margin-standard);
   text-align: justify;
-  text-justify: distribute;
 }
 
 .content_text p {
