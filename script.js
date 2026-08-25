@@ -19,6 +19,7 @@ fetch("footer.html")
 function toggleMenu() {
 
     const popoutMenu = document.getElementById("popout_menu");
+    const popoutMenuContent = document.getElementById("popout_menu_content");
     const menuIcon = document.getElementById("menu_icon");
     const footer = document.querySelector("footer");
     const body = document.body;
@@ -34,7 +35,7 @@ function toggleMenu() {
             footer.classList.add("sticky_footer");
             body.classList.add("noscroll");
 
-            popoutMenu.scrollTop = 0;
+            popoutMenuContent.scrollTop = 0;
 
         }
         
