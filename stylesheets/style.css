@@ -6,7 +6,7 @@
   --text-color: rgba(60, 100, 90, 1);
   --background-color: rgba(255, 255, 255, 1);
   --highlight-blue: rgba(22, 192, 186, 0.85);
-  --light-blue: rgba(3, 254, 192, 0.85);
+  --light-blue: rgba(3, 254, 192,0.85);
   --dark-blue: rgba(60, 135, 186, 0.85);
   --grey: lightgray;
   --header-content-height: 160px;
@@ -14,7 +14,9 @@
   --footer-height: 120px;
   --gradient-border-thickness: 5px;
   --grey-border-thickness: 2px;
+
   --general-margin-standard: 1.5rem;
+
   --header-mobile-height: calc(var(--header-content-height) + var(--gradient-border-thickness));
   --header-desktop-height: calc(var(--header-mobile-height) + var(--menu-height));
 }
@@ -49,17 +51,16 @@ body {
 .border_grey {
   min-width: 2px;
   min-height: 60%;
-  margin: 0 1rem;
+  margin: 0rem 1rem;
   background-color: var(--grey);
 }
 
-header,
-footer {
+header, footer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 100%;
   max-width: 1500px;
+  width: 100%;
   margin: 0 auto;
   background-color: var(--background-color);
 }
@@ -68,7 +69,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 300;
-  height: var(--header-desktop-height);
+  height: var(--header-desktop-height)
 }
 
 footer {
@@ -76,18 +77,17 @@ footer {
   bottom: 0;
   z-index: 300;
   height: var(--footer-height);
-  margin: 0 auto;
   justify-self: center;
+  margin: 0 auto;
 }
 
 .header_content {
-  position: relative;
   display: flex;
-  align-self: center;
+  position: relative;
   justify-content: space-between;
-  width: 100%;
   max-width: 1000px;
   height: var(--header-content-height);
+  align-self: center;
 }
 
 #menu_icon {
@@ -105,12 +105,13 @@ footer {
   display: flex;
   flex-direction: row;
   min-height: 100px;
-  padding: 0 2rem 0.5rem;
+  padding: 0 2rem 0.5rem 2rem;
   background-color: var(--background-color);
 }
 
 .popout_menu_content {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   z-index: 150;
@@ -125,11 +126,10 @@ footer {
 
 main {
   display: flex;
+  flex-direction: row;
   align-self: center;
   justify-self: center;
-  flex-direction: row;
   gap: var(--general-margin-standard);
-  width: 100%;
   max-width: 1200px;
   max-height: calc(100vh - var(--header-desktop-height) - var(--footer-height));
   padding: 0 var(--general-margin-standard);
@@ -137,29 +137,29 @@ main {
 
 .title {
   display: flex;
-  flex: 1;
   flex-direction: column;
+  flex: 1;
   gap: var(--general-margin-standard);
   padding: var(--general-margin-standard);
-  overflow-x: visible;
   overflow-y: auto;
+  overflow-x: visible;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
 
 .img_and_title {
   display: flex;
-  flex: 0;
   flex-direction: column;
-  align-items: center;
-  gap: 1rem;
   width: 100%;
+  flex: 0;
+  gap: 1rem;
+  align-items: center;
 }
 
 .page_title {
-  margin: 0;
   font-size: 2rem;
   text-align: left;
+  margin: 0;
 }
 
 .img_and_title img {
@@ -170,17 +170,17 @@ main {
 .additional_information {
   display: none;
   flex-direction: column;
-  gap: 1rem;
+  text-align: left;
   margin: 0;
+  gap: 1rem;
   padding: 1rem;
   overflow-wrap: break-word;
-  text-align: left;
   border: var(--gradient-border-thickness) solid var(--highlight-blue);
 }
 
 .additional_information h2 {
   margin: 0;
-  color: var(--highlight-blue);
+  color: var(--highlight-blue)
 }
 
 .additional_information img {
@@ -198,12 +198,12 @@ main {
 }
 
 .quote {
+  display: flex;
   align-self: center;
   padding: 0.5rem;
 }
 
-.quote_sign_left,
-.quote_sign_right {
+.quote_sign_left, .quote_sign_right {
   display: flex;
   flex-direction: column;
   font-size: 1.5rem;
@@ -220,12 +220,12 @@ main {
 
 .paragraphs {
   display: flex;
-  flex: 2;
   flex-direction: column;
-  padding: var(--general-margin-standard) 0;
+  flex: 2;
   overflow-y: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  padding: var(--general-margin-standard) 0;
 }
 
 .content_text {
@@ -246,8 +246,8 @@ main {
   display: flex;
   align-content: center;
   justify-content: space-between;
-  width: 100%;
   max-width: 1200px;
+  width: 100%;
   height: 80%;
   margin: auto;
 }
@@ -256,8 +256,8 @@ main {
 .footer_image_container_Accredited {
   display: flex;
   align-items: center;
-  max-width: 50%;
   max-height: 85%;
+  max-width: 50%;
 }
 
 .footer_image_container_BAcC {
@@ -274,9 +274,9 @@ main {
 
 img {
   display: block;
-  width: fit-content;
-  max-width: 100%;
   max-height: 100%;
+  max-width: 100%;
+  width: fit-content;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -307,12 +307,12 @@ img {
     left: 100%;
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: calc(100vh - var(--header-mobile-height));
     margin: 0;
-    padding: 0 0 var(--footer-height);
-    background-color: var(--background-color);
+    padding: 0 0 var(--footer-height) 0;
+    height: calc(100vh - var(--header-mobile-height));
+    width: 100%;
     transition: left 300ms ease-in-out;
+    background-color: var(--background-color);
   }
 
   .popout_menu_content {
@@ -324,11 +324,11 @@ img {
     width: 100%;
     height: calc(100vh - calc(var(--header-mobile-height) + var(--footer-height)));
     padding: var(--general-margin-standard);
-    overflow-y: scroll;
     font-size: 1.25rem;
-    background-color: var(--background-color);
+    overflow-y: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    background-color: var(--background-color);
   }
 
   .menu_option {
@@ -345,8 +345,8 @@ img {
   }
 
   .noscroll {
-    max-height: 100vh;
     overflow-y: hidden;
+    max-height: 100vh;
   }
 
   .border_grey {
@@ -358,17 +358,17 @@ img {
   main {
     flex-direction: column;
     align-items: center;
-    gap: 0;
     max-width: auto;
     max-height: none;
+    gap: 0;
     padding: 0;
   }
 
   .sticky_footer {
+    height: var(--footer-height);
     position: sticky;
     bottom: 0;
     z-index: 300;
-    height: var(--footer-height);
   }
 
   footer {
@@ -384,8 +384,8 @@ img {
   }
 
   .page_title {
-    padding: 0 var(--general-margin-standard);
     text-align: center;
+    padding: 0 var(--general-margin-standard);
   }
 
   .title {
@@ -393,7 +393,7 @@ img {
     align-items: center;
     width: 100%;
     max-width: 100%;
-    margin: var(--general-margin-standard) 0 0;
+    margin: var(--general-margin-standard) 0 0 0;
     padding: 0;
     overflow-y: visible;
   }
@@ -403,9 +403,9 @@ img {
   }
 
   .paragraphs {
-    min-height: 100%;
-    margin: 0;
     padding: 1.5rem;
+    margin: 0;
+    min-height: 100%;
   }
 
   .content_text {
