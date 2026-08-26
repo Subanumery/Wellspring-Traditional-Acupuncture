@@ -17,11 +17,11 @@
 
   --general-margin-standard: 1.5rem;
 
-  --header-mobile-height: 10vh;
+  --header-mobile-height: 20vh;
   --header-desktop-height: calc(var(--header-content-height) + var(--menu-height) + var(--gradient-border-thickness));
 
   --footer-height: calc(var(--gradient-border-thickness) + var(--footer-content-height));
-  --footer-mobile-height: 8vh;
+  --footer-mobile-height: 15vh;
 }
 
 html {
