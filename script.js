@@ -33,7 +33,7 @@ function toggleMenu() {
     const body = document.body;
     const screenWidth = window.innerWidth;
 
-    if (screenWidth <= 1250) {
+    if (screenWidth <= 1200) {
 
         if (popoutMenu.style.left === "100%") {
 
@@ -57,4 +57,16 @@ function toggleMenu() {
 
         }
     }
+}
+
+function clipboardCopy(elm_id) {
+
+    navigator.clipboard.writeText(elm_id.textContent.trim());
+
+    const originalText = elm_id.textContent;
+    elm_id.textContent = "copied";
+
+    setTimeout(() => {
+        elm_id.textContent = originalText;
+    }, 1000);
 }
