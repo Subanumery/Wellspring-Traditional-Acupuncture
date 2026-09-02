@@ -234,6 +234,7 @@ main {
   display: flex;
   align-self: center;
   padding: 0.5rem;
+  color: white;
 }
 
 .quote_sign_left, .quote_sign_right {
@@ -397,7 +398,6 @@ footer {
     max-height: calc(100dvh - var(--footer-mobile-height));
     padding: var(--general-margin-standard);
     padding-bottom: var(--footer-mobile-height);
-    gap: 1rem;
     overflow-y: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
