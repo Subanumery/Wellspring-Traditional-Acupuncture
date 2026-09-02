@@ -165,7 +165,7 @@ main {
   flex: 1;
   flex-direction: column;
   gap: var(--general-margin-standard);
-  padding: calc(var(--general-margin-standard) * 2) var(--general-margin-standard) var(--general-margin-standard) var(--general-margin-standard);
+  padding: var(--general-margin-standard) var(--general-margin-standard) var(--general-margin-standard) var(--general-margin-standard);
   overflow-y: auto;
   overflow-x: visible;
   -ms-overflow-style: none;
@@ -178,7 +178,12 @@ main {
   gap: 1rem;
   align-items: center;
   max-width: 500px;
-  padding: 0 var(--general-margin-standard);
+  min-height: 400px;
+  padding: var(--general-margin-standard);
+
+  background-color: var(--highlight-blue);
+  
+  box-shadow: 0 0 10px var(--highlight-blue);
 }
 
 .title .img_and_title .page_title {
@@ -223,18 +228,23 @@ main {
 .quote_container {
   display: flex;
   justify-content: center;
+  text-align: justify;
   min-height: 240px;
   max-width: 850px;
   padding: 1rem;
   background-color: var(--highlight-blue);
   box-shadow: 0 0 10px var(--highlight-blue);
+  color: white;
+}
+
+.quote_container:hover {
+  background-image: linear-gradient(to bottom right, var(--dark-blue), var(--light-blue));
 }
 
 .quote {
   display: flex;
   align-self: center;
   padding: 0.5rem;
-  color: white;
 }
 
 .quote_sign_left, .quote_sign_right {
@@ -394,6 +404,7 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    gap: 0.25rem;
     width: 100%;
     max-height: calc(100dvh - var(--footer-mobile-height));
     padding: var(--general-margin-standard);
