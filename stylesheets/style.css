@@ -158,8 +158,8 @@ main {
   gap: var(--general-margin-standard);
   max-width: 1200px;
   max-height: calc(100dvh - var(--header-desktop-height) - var(--footer-height));
-  margin: var(--general-margin-standard) 0 0 0;
-  padding: 0 var(--general-margin-standard);
+
+  border: 1px solid red;
 }
 
 .title {
@@ -177,10 +177,10 @@ main {
 .title .img_and_title {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  flex: 0;
   gap: 1rem;
   align-items: center;
+  max-width: 500px;
+  padding: 0 var(--general-margin-standard);
 }
 
 .title .img_and_title .page_title {
@@ -194,6 +194,32 @@ main {
   max-width: auto;
   max-height: 100%;
   
+}
+
+.highlighted_testimonial_quote_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  width: 100%;
+  background-color: var(--highlight-blue);
+  box-shadow: 0 0 10px var(--highlight-blue);
+  color: white;
+}
+
+.testimonial_quote_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  width: 100%;
+  box-shadow: 0 0 10px var(--highlight-blue);
+}
+
+.testifier {
+  text-align: right;
 }
 
 .quote_container {
@@ -419,7 +445,8 @@ footer {
     max-height: none;
     overflow: visible;
     gap: 0;
-    padding: 0;
+    
+    margin: var(--general-margin-standard) 0 0 0;
   }
 
   .paragraphs {
@@ -446,9 +473,12 @@ footer {
     flex: none;
     align-items: center;
     width: 100%;
-    margin: var(--general-margin-standard) 0 var(--general-margin-standard) 0;
     padding: 0;
     overflow-y: visible;
+  }
+
+  .img_and_title {
+    padding: var(--general-margin-standard);
   }
 
   .quote_container {
