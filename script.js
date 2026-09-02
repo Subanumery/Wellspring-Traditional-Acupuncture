@@ -34,7 +34,7 @@ function toggleMenu() {
     const body = document.body;
     const screenWidth = window.innerWidth;
 
-    if (screenWidth <= 1200) {
+    if (screenWidth <= 1300) {
 
         if (popoutMenu.style.left === "100%") {
 

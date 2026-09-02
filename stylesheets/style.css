@@ -147,10 +147,6 @@ header {
   min-width: 120px;
 }
 
-#menu_contact_button {
-  display: none;
-}
-
 main {
   display: flex;
   flex-direction: row;
@@ -165,8 +161,8 @@ main {
 
 .title {
   display: flex;
-  flex-direction: column;
   flex: 1;
+  flex-direction: column;
   gap: var(--general-margin-standard);
   padding: var(--general-margin-standard);
   overflow-y: auto;
@@ -188,11 +184,13 @@ main {
   font-size: 2rem;
   text-align: center;
   margin: 0;
+  
 }
 
 .title .img_and_title img {
   max-width: auto;
   max-height: 100%;
+  
 }
 
 .quote_container {
@@ -299,7 +297,7 @@ footer {
   justify-content: flex-end;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1300px) {
 
   html {
     font-size: 16px;
@@ -423,6 +421,10 @@ footer {
     overflow: visible;
   }
 
+  .title {
+    flex: none;
+  }
+
   .img_and_title {
     display: flex;
     flex-direction: column;
@@ -440,7 +442,6 @@ footer {
     display: flex;
     align-items: center;
     width: 100%;
-    max-width: 100%;
     margin: var(--general-margin-standard) 0 0;
     padding: 0;
     overflow-y: visible;
