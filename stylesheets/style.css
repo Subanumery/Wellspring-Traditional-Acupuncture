@@ -231,20 +231,32 @@ main {
   overflow-y: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  padding: var(--general-margin-standard) 0;
+  padding: var(--general-margin-standard);
 }
 
 .content_text {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: var(--general-margin-standard);
   max-width: 800px;
   padding: 0 var(--general-margin-standard);
   text-align: justify;
 }
 
+#first_line {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--highlight-blue);
+
+}
+
 .content_text p {
   margin: 0;
+}
+
+.content_text h2 {
+  margin: 0;
+
 }
 
 footer {
@@ -421,10 +433,6 @@ footer {
     overflow: visible;
   }
 
-  .title {
-    flex: none;
-  }
-
   .img_and_title {
     display: flex;
     flex-direction: column;
@@ -440,9 +448,10 @@ footer {
 
   .title {
     display: flex;
+    flex: none;
     align-items: center;
     width: 100%;
-    margin: var(--general-margin-standard) 0 0;
+    margin: var(--general-margin-standard) 0 var(--general-margin-standard) 0;
     padding: 0;
     overflow-y: visible;
   }
