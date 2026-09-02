@@ -28,6 +28,10 @@
   --footer-mobile-height: calc(var(--gradient-border-thickness) + var(--footer-content-mobile-height));
 }
 
+.noshow {
+  display: none !important;
+}
+
 html {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
@@ -130,7 +134,7 @@ header {
   min-height: 100px;
   padding: 0 2rem 0.5rem 2rem;
   background-color: var(--background-color);
-  font-size: 22px;
+  font-size: 1.1rem;
 }
 
 .popout_menu_content {
@@ -140,7 +144,6 @@ header {
   justify-content: space-between;
   z-index: 150;
   width: 100%;
-  font-size: 1rem;
 }
 
 .popout_menu a {
@@ -286,7 +289,7 @@ footer {
   justify-self: center;
   justify-content: center;
   max-height: 100%;
-  font-size: 14px;
+  font-size: 0.75rem;
 }
 
 .footer_contact_details p {
@@ -310,10 +313,6 @@ footer {
 }
 
 @media only screen and (max-width: 1300px) {
-
-  html {
-    font-size: 16px;
-  }
 
   body {
     display: flex;
@@ -362,6 +361,7 @@ footer {
     margin: 0;
     background-color: var(--background-color);
     transition: left 300ms ease-in-out;
+    font-size: 1.25rem;
   }
 
   .popout_menu_content {
@@ -374,7 +374,6 @@ footer {
     padding: var(--general-margin-standard);
     padding-bottom: var(--footer-mobile-height);
     gap: 1rem;
-    font-size: 1.25rem;
     overflow-y: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -383,10 +382,6 @@ footer {
 
   .menu_option {
     margin: var(--general-margin-standard) 0;
-  }
-
-  #menu_contact_button {
-    display: block;
   }
 
   #menu_icon {
@@ -459,9 +454,6 @@ footer {
   .quote_container {
     margin: 0;
   }
-}
-
-@media only screen and (max-width: 1050px) {
 
   .footer_contact_details {
     display: none;
@@ -470,7 +462,7 @@ footer {
   #footer_contact_button {
     display: flex;
     align-items: center;
-    font-size: 20px;
+    font-size: 1.1rem;
   }
 
 }
