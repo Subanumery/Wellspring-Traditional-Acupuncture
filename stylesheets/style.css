@@ -25,7 +25,7 @@
   --header-mobile-height: calc(var(--header-content-mobile-height) + var(--gradient-border-thickness));
 
   --footer-height: calc(var(--gradient-border-thickness) + var(--footer-content-height));
-  --footer-mobile-height: calc(var(--gradient-border-thickness) + var(--footer-mobile-content-height));
+  --footer-mobile-height: calc(var(--gradient-border-thickness) + var(--footer-content-mobile-height));
 }
 
 html {
@@ -78,7 +78,6 @@ a img:hover {
 }
 
 header, footer {
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -140,7 +139,6 @@ header {
   align-items: center;
   justify-content: space-between;
   z-index: 150;
-  max-height: 800px;
   width: 100%;
   font-size: 1rem;
 }
@@ -160,7 +158,7 @@ main {
   justify-self: center;
   gap: var(--general-margin-standard);
   max-width: 1200px;
-  max-height: calc(100vh - var(--header-desktop-height) - var(--footer-height));
+  max-height: calc(100dvh - var(--header-desktop-height) - var(--footer-height));
   margin: var(--general-margin-standard) 0 0 0;
   padding: 0 var(--general-margin-standard);
 }
@@ -285,20 +283,20 @@ footer {
   margin: 0rem;
 }
 
-.footer_contact_button {
+#footer_contact_button {
   display: none;
 }
 
 .footer_image_container_BAcC,
 .footer_image_container_Accredited {
   flex: 1;
+  min-width: 0;
   margin: 1rem;
-  min-width: 100px;
 }
 
-.footer_image_container_Accredited img {
-  justify-self: flex-end;
-
+.footer_image_container_Accredited {
+  display: flex;
+  justify-content: flex-end;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -307,17 +305,23 @@ footer {
     font-size: 16px;
   }
 
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+  }
+
   header {
     height: var(--header-mobile-height);
   }
 
   footer {
+    position: static;
+    width: 100%;
     height: var(--footer-mobile-height);
-
   }
 
   .image_container_logo {
-    display: flex;
     align-items: center;
     max-height: 100%;
     margin: 1rem 0.5rem 1rem 1rem;
@@ -343,25 +347,25 @@ footer {
     left: 100%;
     display: flex;
     flex-direction: column;
-    margin: 0;
-    padding: 0 0 var(--footer-height) 0;
-    height: calc(100vh - var(--header-mobile-height));
     width: 100%;
-    transition: left 300ms ease-in-out;
+    height: calc(100dvh - var(--header-mobile-height));
+    margin: 0;
     background-color: var(--background-color);
+    transition: left 300ms ease-in-out;
   }
 
   .popout_menu_content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    z-index: 150;
+    justify-content: space-around;
     width: 100%;
-    height: calc(100vh - calc(var(--header-mobile-height) + var(--footer-height)));
+    max-height: calc(100dvh - var(--footer-mobile-height));
     padding: var(--general-margin-standard);
+    padding-bottom: var(--footer-mobile-height);
+    gap: 1rem;
     font-size: 1.25rem;
-    overflow-y: scroll;
+    overflow-y: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
     background-color: var(--background-color);
@@ -370,9 +374,9 @@ footer {
   .menu_option {
     margin: var(--general-margin-standard) 0;
   }
-  
+
   #menu_contact_button {
-    display: border-box;
+    display: block;
   }
 
   #menu_icon {
@@ -401,12 +405,6 @@ footer {
     z-index: 300;
   }
 
-  body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  
   main {
     flex: 1;
     flex-direction: column;
@@ -420,14 +418,9 @@ footer {
   }
 
   .paragraphs {
-    padding: 1.5rem;
+    padding: var(--general-margin-standard);
     margin: 0;
     overflow: visible;
-  }
-
-  footer {
-    position: static;
-    width: 100%;
   }
 
   .img_and_title {
@@ -448,7 +441,7 @@ footer {
     align-items: center;
     width: 100%;
     max-width: 100%;
-    margin: var(--general-margin-standard) 0 0 0;
+    margin: var(--general-margin-standard) 0 0;
     padding: 0;
     overflow-y: visible;
   }
@@ -456,7 +449,6 @@ footer {
   .quote_container {
     margin: 0;
   }
-
 }
 
 @media only screen and (max-width: 1050px) {
@@ -465,10 +457,18 @@ footer {
     display: none;
   }
 
-  .footer_contact_button {
+  #footer_contact_button {
     display: flex;
     align-items: center;
-    font-size: 18px;
+    font-size: 20px;
+  }
+
+}
+
+@media only screen and (max-width: 450px) {
+
+  #footer_contact_button {
+    display: none;
   }
 
 }

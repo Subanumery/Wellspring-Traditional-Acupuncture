@@ -30,6 +30,7 @@ function toggleMenu() {
     const popoutMenuContent = document.getElementById("popout_menu_content");
     const menuIcon = document.getElementById("menu_icon");
     const footer = document.querySelector("footer");
+    const contactButton = document.getElementById("footer_contact_button")
     const body = document.body;
     const screenWidth = window.innerWidth;
 
@@ -41,6 +42,7 @@ function toggleMenu() {
             menuIcon.classList.add("fa-times");
             menuIcon.classList.remove("fa-bars");
             footer.classList.add("sticky_footer");
+            contactButton.classList.add("noshow");
             body.classList.add("noscroll");
 
             popoutMenuContent.scrollTop = 0;
@@ -54,6 +56,7 @@ function toggleMenu() {
             menuIcon.classList.remove("fa-times");
             footer.classList.remove("sticky_footer");
             body.classList.remove("noscroll");
+            contactButton.classList.remove("noshow");
 
         }
     }
