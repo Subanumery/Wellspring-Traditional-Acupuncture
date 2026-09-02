@@ -447,7 +447,7 @@ footer {
   }
 
   .paragraphs {
-    padding: var(--general-margin-standard);
+    padding: var(--general-margin-standard) 0;
     margin: 0;
     overflow: visible;
   }
