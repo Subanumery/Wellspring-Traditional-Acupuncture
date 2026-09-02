@@ -149,6 +149,10 @@ header {
   min-width: 120px;
 }
 
+#menu_contact_button {
+  display: none;
+}
+
 main {
   display: flex;
   flex-direction: row;
@@ -365,6 +369,10 @@ footer {
 
   .menu_option {
     margin: var(--general-margin-standard) 0;
+  }
+  
+  #menu_contact_button {
+    display: border-box;
   }
 
   #menu_icon {
