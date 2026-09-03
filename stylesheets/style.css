@@ -43,6 +43,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--background-color);
+  height: 100dvh;
 }
 
 img {
@@ -158,6 +159,7 @@ main {
   gap: var(--general-margin-standard);
   max-width: 1200px;
   max-height: calc(100dvh - var(--header-desktop-height) - var(--footer-height));
+  height: 100%;
 }
 
 .title {
@@ -165,7 +167,7 @@ main {
   flex: 1;
   flex-direction: column;
   gap: var(--general-margin-standard);
-  padding: var(--general-margin-standard) var(--general-margin-standard) var(--general-margin-standard) var(--general-margin-standard);
+  padding: var(--general-margin-standard);
   overflow-y: auto;
   overflow-x: visible;
   -ms-overflow-style: none;
@@ -175,15 +177,20 @@ main {
 .title .img_and_title {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: var(--general-margin-standard);
   align-items: center;
-  max-width: 500px;
-  min-height: 400px;
   padding: var(--general-margin-standard);
-
+  height: 100%;
   background-color: var(--highlight-blue);
-  
   box-shadow: 0 0 10px var(--highlight-blue);
+  color: white;
+}
+
+.img_and_title#about_emma {
+  background-color: var(--background-color);
+  box-shadow: none;
+  height: auto;
+  color: var(--text-color);
 }
 
 .title .img_and_title .page_title {
@@ -477,6 +484,7 @@ footer {
   }
 
   .title {
+    flex: 0;
     display: flex;
     flex: none;
     align-items: center;
@@ -487,6 +495,7 @@ footer {
 
   .img_and_title {
     padding: var(--general-margin-standard);
+    width: 100%;
   }
 
   .quote_container {
