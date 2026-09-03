@@ -14,7 +14,7 @@
   background-color: var(--grey);
 }
 
-@media only screen and (max-width: 1300) {
+@media only screen and (max-width: 1300px) {
 
   .border_grey {
     width: 10rem;

@@ -1,0 +1,210 @@
+
+
+img {
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+a:hover, span:hover {
+  color: var(--highlight-blue);
+  cursor: pointer;
+}
+
+a img:hover {
+  border: var(--grey-border-thickness) solid var(--highlight-blue);
+}
+
+.title {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--general-margin-standard);
+  padding: var(--general-margin-standard);
+  overflow-y: auto;
+  overflow-x: visible;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.title .img_and_title {
+  display: flex;
+  flex-direction: column;
+  gap: var(--general-margin-standard);
+  align-items: center;
+  padding: var(--general-margin-standard);
+  height: 100%;
+  background-color: var(--highlight-blue);
+  box-shadow: 0 0 10px var(--highlight-blue);
+  color: white;
+}
+
+.img_and_title#about_emma {
+  background-color: var(--background-color);
+  box-shadow: none;
+  height: auto;
+  color: var(--text-color);
+}
+
+.title .img_and_title .page_title {
+  font-size: 2rem;
+  text-align: center;
+  margin: 0;
+  
+}
+
+.title .img_and_title img {
+  max-width: auto;
+  max-height: 100%;
+  
+}
+
+.highlighted_testimonial_quote_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  width: 100%;
+  background-color: var(--highlight-blue);
+  box-shadow: 0 0 10px var(--highlight-blue);
+  color: white;
+}
+
+.testimonial_quote_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  width: 100%;
+  box-shadow: 0 0 10px var(--highlight-blue);
+}
+
+.testifier {
+  text-align: right;
+}
+
+.quote_container {
+  display: flex;
+  justify-content: center;
+  text-align: justify;
+  min-height: 240px;
+  max-width: 850px;
+  padding: 1rem;
+  background-color: var(--highlight-blue);
+  box-shadow: 0 0 10px var(--highlight-blue);
+  color: white;
+}
+
+.quote_container:hover {
+  background-image: linear-gradient(to bottom right, var(--dark-blue), var(--light-blue));
+}
+
+.quote {
+  display: flex;
+  align-self: center;
+  padding: 0.5rem;
+}
+
+.quote_sign_left, .quote_sign_right {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  color: var(--background-color);
+}
+
+.quote_sign_left {
+  justify-content: flex-start;
+}
+
+.quote_sign_right {
+  justify-content: flex-end;
+}
+
+.paragraphs {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  padding: calc(var(--general-margin-standard) * 2) var(--general-margin-standard) var(--general-margin-standard) var(--general-margin-standard);
+}
+
+.content_text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--general-margin-standard);
+  max-width: 800px;
+  padding: 0 var(--general-margin-standard);
+  text-align: justify;
+}
+
+#first_line {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--highlight-blue);
+
+}
+
+.content_text p {
+  margin: 0;
+}
+
+.content_text h2 {
+  margin: 0;
+
+}
+
+@media only screen and (max-width: 1300px) {
+
+  .paragraphs {
+    padding: var(--general-margin-standard) 0;
+    margin: 0;
+    overflow: visible;
+  }
+
+  .img_and_title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--general-margin-standard);
+    height: auto;
+  }
+
+  .page_title {
+    text-align: center;
+    padding: 0 var(--general-margin-standard);
+  }
+
+  .title {
+    flex: 0;
+    display: flex;
+    flex: none;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    overflow-y: visible;
+  }
+
+  .img_and_title {
+    padding: var(--general-margin-standard);
+    width: 100%;
+  }
+
+  .quote_container {
+    margin: 0;
+  }
+
+}
+

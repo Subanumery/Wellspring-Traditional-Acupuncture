@@ -1,0 +1,8 @@
+  
+.noshow {
+  display: none !important;
+}  
+
+.noscroll {
+  overflow-y: hidden;
+}
