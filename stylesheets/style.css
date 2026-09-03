@@ -52,6 +52,10 @@ img {
   max-width: 100%;
 }
 
+p {
+  margin: 0;
+}
+
 a {
   color: var(--text-color);
   text-decoration: none;
@@ -80,16 +84,6 @@ a img:hover {
   min-height: 60%;
   margin: 0rem 1rem;
   background-color: var(--grey);
-}
-
-footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  max-width: 1500px;
-  width: 100%;
-  margin: 0 auto;
-  background-color: var(--background-color);
 }
 
 main {
@@ -245,55 +239,13 @@ main {
 
 }
 
-footer {
-  position: fixed;
-  bottom: 0;
-  z-index: 300;
-  height: var(--footer-height);
-  justify-self: center;
-  align-items: center;
-  margin: 0 auto;
-  padding: 0;
-}
 
-.footer_content {
-  display: flex;
-  align-content: center;
-  justify-content: space-between;
-  max-width: 1200px;
-  width: 100%;
-  height: var(--footer-content-height);
-}
 
-.footer_contact_details {
-  flex: 2;
-  display: flex;
-  flex-direction: column;
-  justify-self: center;
-  justify-content: center;
-  max-height: 100%;
-  font-size: 0.75rem;
-}
 
-.footer_contact_details p {
-  margin: 0rem;
-}
 
-#footer_contact_button {
-  display: none;
-}
 
-.footer_image_container_BAcC,
-.footer_image_container_Accredited {
-  flex: 1;
-  min-width: 0;
-  margin: 1rem;
-}
 
-.footer_image_container_Accredited {
-  display: flex;
-  justify-content: flex-end;
-}
+
 
 @media only screen and (max-width: 1300px) {
 
@@ -304,16 +256,6 @@ footer {
   }
 
 
-
-  footer {
-    position: static;
-    width: 100%;
-    height: var(--footer-mobile-height);
-  }
-
-  .footer_content {
-    height: var(--footer-content-mobile-height);
-  }
 
 
 
@@ -333,12 +275,7 @@ footer {
     background-color: lightgray;
   }
 
-  .sticky_footer {
-    height: var(--footer-mobile-height);
-    position: sticky;
-    bottom: 0;
-    z-index: 300;
-  }
+
 
   main {
     flex: 1;
@@ -390,22 +327,7 @@ footer {
     margin: 0;
   }
 
-  .footer_contact_details {
-    display: none;
-  }
 
-  #footer_contact_button {
-    display: flex;
-    align-items: center;
-    font-size: 1.1rem;
-  }
 
 }
 
-@media only screen and (max-width: 450px) {
-
-  #footer_contact_button {
-    display: none;
-  }
-
-}
