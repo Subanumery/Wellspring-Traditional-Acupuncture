@@ -24,7 +24,7 @@ a img:hover {
   border: var(--grey-border-thickness) solid var(--highlight-blue);
 }
 
-.title {
+.page_topper {
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -36,7 +36,7 @@ a img:hover {
   scrollbar-width: none;
 }
 
-.title .img_and_title {
+.titlecard {
   display: flex;
   flex-direction: column;
   gap: var(--general-margin-standard);
@@ -48,24 +48,21 @@ a img:hover {
   color: white;
 }
 
-.img_and_title#about_emma {
-  background-color: var(--background-color);
-  box-shadow: none;
+.titlecard#about_emma {
   height: auto;
+  background-color: var(--background-color);
   color: var(--text-color);
 }
 
-.title .img_and_title .page_title {
+.page_title {
   font-size: 2rem;
   text-align: center;
   margin: 0;
-  
 }
 
-.title .img_and_title img {
+.titlecard img {
   max-width: auto;
   max-height: 100%;
-  
 }
 
 .highlighted_testimonial_quote_container {
@@ -136,8 +133,6 @@ a img:hover {
   flex-direction: column;
   flex: 2;
   overflow-y: scroll;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
   padding: calc(var(--general-margin-standard) * 2) var(--general-margin-standard) var(--general-margin-standard) var(--general-margin-standard);
 }
 
@@ -172,22 +167,11 @@ a img:hover {
     padding: var(--general-margin-standard) 0;
     margin: 0;
     overflow: visible;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
-
-  .img_and_title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--general-margin-standard);
-    height: auto;
-  }
-
-  .page_title {
-    text-align: center;
-    padding: 0 var(--general-margin-standard);
-  }
-
-  .title {
+  
+  .page_topper {
     flex: 0;
     display: flex;
     flex: none;
@@ -197,9 +181,18 @@ a img:hover {
     overflow-y: visible;
   }
 
-  .img_and_title {
-    padding: var(--general-margin-standard);
+  .titlecard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--general-margin-standard);
+    height: auto;    padding: var(--general-margin-standard);
     width: 100%;
+  }
+
+  .page_title {
+    text-align: center;
+    padding: 0 var(--general-margin-standard);
   }
 
   .quote_container {

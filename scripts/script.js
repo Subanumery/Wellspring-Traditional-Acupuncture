@@ -22,8 +22,7 @@ fetch("head.html")
         document.getElementById("head").innerHTML = data;
 
     })
-
-
+    
 function toggleMenu() {
 
     const popoutMenu = document.getElementById("popout_menu");
