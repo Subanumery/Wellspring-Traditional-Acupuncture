@@ -23,7 +23,6 @@
   background-image: var(--highlight-background-image);
   box-shadow: 0 0 10px var(--highlight-blue);
   color: white;
-  border: 1px solid red;
 }
 
 .titlecard#about_emma {
