@@ -1,0 +1,105 @@
+.page_topper {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--general-margin-standard);
+  padding: var(--general-margin-standard);
+  overflow-y: auto;
+  overflow-x: visible;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.page_topper img {
+  max-width: 300px;
+}
+
+.titlecard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--general-margin-standard);
+  padding: var(--general-margin-standard);
+  height: 100%;
+  background-image: var(--highlight-background-image);
+  box-shadow: 0 0 10px var(--highlight-blue);
+  color: white;
+  border: 1px solid red;
+}
+
+.titlecard#about_emma {
+  flex: 0;
+  padding-bottom: calc(var(--general-margin-standard) * 4);
+}
+
+.titlecard #about_emma {
+  height: auto;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.document_title_container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--general-margin-standard);
+  justify-self: left;
+  justify-content: right;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: left;
+  list-style-type: none;
+}
+
+.document_title_container li:hover {
+  margin-left: var(--general-margin-standard);
+  list-style-type: disc;
+
+}
+
+.page_title {
+  align-self: center;
+  font-size: 2rem;
+  text-align: center;
+  margin: 0;
+}
+
+.titlecard img {
+  align-self: center;
+  max-width: auto;
+  max-height: 100%;
+}
+
+@media only screen and (max-width: 1300px) {
+
+  .page_topper {
+    flex: 0;
+    display: flex;
+    flex: none;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    overflow-y: visible;
+  }
+
+  .titlecard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--general-margin-standard);
+    height: auto;
+    padding: var(--general-margin-standard) var(--general-margin-standard) calc(var(--general-margin-standard) * 2) var(--general-margin-standard);
+    width: 100%;
+  }
+
+  .titlecard#about_emma {
+    padding-bottom: calc(var(--general-margin-standard) * 2);
+
+  }
+
+  .page_title {
+    text-align: center;
+    padding: 0 var(--general-margin-standard);
+  }
+
+}

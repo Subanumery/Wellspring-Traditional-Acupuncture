@@ -1,5 +1,3 @@
-
-
 img {
   display: block;
   max-height: 100%;
@@ -24,110 +22,6 @@ a img:hover {
   border: var(--grey-border-thickness) solid var(--highlight-blue);
 }
 
-.page_topper {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  gap: var(--general-margin-standard);
-  padding: var(--general-margin-standard);
-  overflow-y: auto;
-  overflow-x: visible;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.titlecard {
-  display: flex;
-  flex-direction: column;
-  gap: var(--general-margin-standard);
-  align-items: center;
-  padding: var(--general-margin-standard);
-  height: 100%;
-  background-color: var(--highlight-blue);
-  box-shadow: 0 0 10px var(--highlight-blue);
-  color: white;
-}
-
-.titlecard#about_emma {
-  height: auto;
-  background-color: var(--background-color);
-  color: var(--text-color);
-}
-
-.page_title {
-  font-size: 2rem;
-  text-align: center;
-  margin: 0;
-}
-
-.titlecard img {
-  max-width: auto;
-  max-height: 100%;
-}
-
-.highlighted_testimonial_quote_container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 1rem;
-  width: 100%;
-  background-color: var(--highlight-blue);
-  box-shadow: 0 0 10px var(--highlight-blue);
-  color: white;
-}
-
-.testimonial_quote_container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 1rem;
-  width: 100%;
-  box-shadow: 0 0 10px var(--highlight-blue);
-}
-
-.testifier {
-  text-align: right;
-}
-
-.quote_container {
-  display: flex;
-  justify-content: center;
-  text-align: justify;
-  min-height: 240px;
-  max-width: 850px;
-  padding: 1rem;
-  background-color: var(--highlight-blue);
-  box-shadow: 0 0 10px var(--highlight-blue);
-  color: white;
-}
-
-.quote_container:hover {
-  background-image: linear-gradient(to bottom right, var(--dark-blue), var(--light-blue));
-}
-
-.quote {
-  display: flex;
-  align-self: center;
-  padding: 0.5rem;
-}
-
-.quote_sign_left, .quote_sign_right {
-  display: flex;
-  flex-direction: column;
-  font-size: 1.5rem;
-  color: var(--background-color);
-}
-
-.quote_sign_left {
-  justify-content: flex-start;
-}
-
-.quote_sign_right {
-  justify-content: flex-end;
-}
-
 .paragraphs {
   display: flex;
   flex-direction: column;
@@ -145,20 +39,14 @@ a img:hover {
   text-align: justify;
 }
 
-#first_line {
+#in_page_text_highlight {
   font-size: 1.25rem;
   font-weight: bold;
   color: var(--highlight-blue);
-
 }
 
 .content_text p {
   margin: 0;
-}
-
-.content_text h2 {
-  margin: 0;
-
 }
 
 @media only screen and (max-width: 1300px) {
@@ -169,30 +57,6 @@ a img:hover {
     overflow: visible;
     -ms-overflow-style: none;
     scrollbar-width: none;
-  }
-  
-  .page_topper {
-    flex: 0;
-    display: flex;
-    flex: none;
-    align-items: center;
-    width: 100%;
-    padding: 0;
-    overflow-y: visible;
-  }
-
-  .titlecard {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--general-margin-standard);
-    height: auto;    padding: var(--general-margin-standard);
-    width: 100%;
-  }
-
-  .page_title {
-    text-align: center;
-    padding: 0 var(--general-margin-standard);
   }
 
   .quote_container {
