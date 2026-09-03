@@ -1,0 +1,25 @@
+.border_gradient {
+  position: relative;
+  width: 100%;
+  min-height: var(--gradient-border-thickness);
+  max-width: 1600px;
+  height: var(--gradient-border-thickness);
+  background-image: linear-gradient(var(--light-blue), var(--dark-blue));
+}
+
+.border_grey {
+  min-width: 2px;
+  min-height: 60%;
+  margin: 0rem 1rem;
+  background-color: var(--grey);
+}
+
+@media only screen and (max-width: 1300) {
+
+  .border_grey {
+    width: 10rem;
+    min-height: 2px;
+    background-color: lightgray;
+  }
+
+}

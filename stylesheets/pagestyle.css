@@ -2,32 +2,6 @@
   box-sizing: border-box;
 }
 
-:root {
-  --text-color: rgba(60, 100, 90, 1);
-  --background-color: rgba(255, 255, 255, 1);
-  --highlight-blue: rgba(22, 192, 186, 0.85);
-  --light-blue: rgba(3, 254, 192,0.85);
-  --dark-blue: rgba(60, 135, 186, 0.85);
-  --grey: lightgray;
-
-  --header-content-height: 160px;
-  --header-content-mobile-height: 100px;
-  --menu-height: 100px;
-  --footer-content-height: 100px;
-  --footer-content-mobile-height: 80px;
-  --gradient-border-thickness: 5px;
-  --grey-border-thickness: 2px;
-
-  --general-margin-standard: 1.5rem;
-
-
-  --header-desktop-height: calc(var(--header-content-height) + var(--menu-height) + var(--gradient-border-thickness));
-  --header-mobile-height: calc(var(--header-content-mobile-height) + var(--gradient-border-thickness));
-
-  --footer-height: calc(var(--gradient-border-thickness) + var(--footer-content-height));
-  --footer-mobile-height: calc(var(--gradient-border-thickness) + var(--footer-content-mobile-height));
-}
-
 .noshow {
   display: none !important;
 }
@@ -70,21 +44,7 @@ a img:hover {
   border: var(--grey-border-thickness) solid var(--highlight-blue);
 }
 
-.border_gradient {
-  position: relative;
-  width: 100%;
-  min-height: var(--gradient-border-thickness);
-  max-width: 1600px;
-  height: var(--gradient-border-thickness);
-  background-image: linear-gradient(var(--light-blue), var(--dark-blue));
-}
 
-.border_grey {
-  min-width: 2px;
-  min-height: 60%;
-  margin: 0rem 1rem;
-  background-color: var(--grey);
-}
 
 main {
   display: flex;
@@ -269,11 +229,7 @@ main {
     overflow-y: hidden;
   }
 
-  .border_grey {
-    width: 10rem;
-    min-height: 2px;
-    background-color: lightgray;
-  }
+
 
 
 
