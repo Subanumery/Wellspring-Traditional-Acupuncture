@@ -44,8 +44,6 @@ function toggleMenu() {
             contactButton.classList.add("noshow");
             body.classList.add("noscroll");
 
-            popoutMenuContent.scrollTop = 0;
-
         }
         
         else {
@@ -54,8 +52,8 @@ function toggleMenu() {
             menuIcon.classList.add("fa-bars");
             menuIcon.classList.remove("fa-times");
             footer.classList.remove("sticky_footer");
-            body.classList.remove("noscroll");
             contactButton.classList.remove("noshow");
+            body.classList.remove("noscroll");
 
         }
     }
@@ -71,4 +69,10 @@ function clipboardCopy(elm_id) {
     setTimeout(() => {
         elm_id.textContent = originalText;
     }, 1000);
+}
+
+function changeDocumentPage(elm_id) {
+    elm_id.classList.add();
+
+
 }

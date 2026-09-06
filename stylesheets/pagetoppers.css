@@ -44,10 +44,17 @@
   justify-content: right;
   margin: 0;
   padding: 0;
+  width: 100%;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   text-align: left;
   list-style-type: none;
+}
+
+.document_title_container li:hover {
+  margin: 0 0 0 var(--general-margin-standard);
+  font-style: italic;
+  list-style-type: disc;
 }
 
 .page_title {
@@ -85,6 +92,11 @@
     width: 100%;
   }
 
+  .titlecard#contact {
+    padding: var(--general-margin-standard);
+    
+  }
+
   .titlecard#about_emma {
     padding-bottom: calc(var(--general-margin-standard) * 2);
 
@@ -93,6 +105,11 @@
   .page_title {
     text-align: center;
     padding: 0 var(--general-margin-standard);
+  }
+
+  .document_title_container {
+    max-width: 300px;
+
   }
 
 }

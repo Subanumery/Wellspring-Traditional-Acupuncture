@@ -111,6 +111,7 @@ header {
     justify-content: space-around;
     gap: 0.25rem;
     width: 100%;
+    min-height: 0;
     max-height: calc(100dvh - var(--footer-mobile-height));
     padding: var(--general-margin-standard);
     padding-bottom: var(--footer-mobile-height);
