@@ -50,12 +50,6 @@
   list-style-type: none;
 }
 
-.document_title_container li:hover {
-  margin-left: var(--general-margin-standard);
-  list-style-type: disc;
-
-}
-
 .page_title {
   align-self: center;
   font-size: 2rem;
