@@ -6,8 +6,6 @@
   padding: var(--general-margin-standard);
   overflow-y: auto;
   overflow-x: visible;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
 }
 
 .page_topper img {
@@ -55,6 +53,7 @@
   margin: 0 0 0 var(--general-margin-standard);
   font-style: italic;
   list-style-type: disc;
+  cursor: pointer;
 }
 
 .page_title {

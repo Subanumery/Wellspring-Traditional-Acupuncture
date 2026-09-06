@@ -116,8 +116,6 @@ header {
     padding: var(--general-margin-standard);
     padding-bottom: var(--footer-mobile-height);
     overflow-y: auto;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
     background-color: var(--background-color);
     text-align: center;
   }

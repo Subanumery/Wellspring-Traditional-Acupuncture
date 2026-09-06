@@ -72,7 +72,5 @@ function clipboardCopy(elm_id) {
 }
 
 function changeDocumentPage(elm_id) {
-    elm_id.classList.add();
-
-
+    elm_id.classList.toggle("document_selection");
 }
