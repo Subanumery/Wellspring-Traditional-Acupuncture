@@ -64,13 +64,34 @@ function clipboardCopy(elm_id) {
     navigator.clipboard.writeText(elm_id.textContent.trim());
 
     const originalText = elm_id.textContent;
+
     elm_id.textContent = "copied";
 
     setTimeout(() => {
+
         elm_id.textContent = originalText;
+
     }, 1000);
 }
 
-function changeDocumentPage(elm_id) {
-    elm_id.classList.toggle("document_selection");
+function changeDocumentPage(documentTitle) {
+
+    const documentPageContent = document.getElementById(documentTitle.dataset.target);
+
+    document.querySelectorAll(".document_selection").forEach(el => {
+
+        el.classList.remove("document_selection");
+
+    });
+
+    documentTitle.classList.add("document_selection");
+
+    document.querySelectorAll(".show").forEach(el => {
+
+        el.classList.remove("show");
+
+    });
+
+    documentPageContent.classList.add("show");
+
 }

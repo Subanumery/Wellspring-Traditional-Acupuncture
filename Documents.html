@@ -5,7 +5,7 @@
   <head id = "head">
   </head>
 
-  <body>
+  <body onload = "changeDocumentPage(infection_policy_title)">
   
    <header id = "header">
    </header>
@@ -20,20 +20,15 @@
 
           <ul class = "document_title_container">
 
-            <li class = "document_title" id = "infection_policy_title" onclick = "changeDocumentPage(this)">Infection Control Policy</li>
+            <li class = "document_title" id = "infection_policy_title" data-target = "infection_policy_page_content" onclick = "changeDocumentPage(this)">Infection Control Policy</li>
 
-            <li class = "document_title" id = "privacy_policy_title" onclick = "changeDocumentPage(this)">Privacy Policy</li>
+            <li class = "document_title" id = "privacy_policy_title" data-target = "privacy_policy_page_content" onclick = "changeDocumentPage(this)">Privacy Policy</li>
 
-            <li class = "document_title" id = "consent_form_title" onclick = "changeDocumentPage(this)">Consent Form</li>
+            <li class = "document_title" id = "consent_form_title" data-target = "consent_form_page_content" onclick = "changeDocumentPage(this)">Consent Form</li>
 
           </ul>
         
         </div>
-
-        <nav class = "document_pages">
-          
-
-        </nav>
 
       </div>
 
@@ -41,9 +36,11 @@
 
         <div class = "content">
 
-            <div class = "infection_policy_page_content">
+            <div id = "infection_policy_page_content">
+
+              <p id = "in_page_text_highlight">Infection Control Policy</p>
             
-              <p id = "in_page_text_highlight">Due to the current Covid-19 situation I am vigilant with infection control in my clinic.</p>
+              <p>Due to the current Covid-19 situation I am vigilant with infection control in my clinic.</p>
                   
               <p>I am not asking you to do anything that I do not expect of myself. By wearing a mask I choose to protect myself, my family, my friends, the community and, in this practice, my patients, particularly those who are more vulnerable.</p>
               
@@ -61,9 +58,11 @@
 
             </div>
 
-            <div class = "privacy_policy_page_content">
+            <div id = "privacy_policy_page_content">
 
-              <p>Emma Leeson-Kings and Wellspring Traditional Acupuncture are committed to respecting and protecting your privacy.</p>
+              <p id = "in_page_text_highlight">Privacy Policy</p>
+
+              <p><em>Emma Leeson-Kings and Wellspring Traditional Acupuncture are committed to respecting and protecting your privacy.</em></p>
 
               <p id = "in_page_text_highlight">What Is the Purpose of this Privacy Notice?</p>
 
@@ -94,32 +93,60 @@
               <p>My ‘Legitimate Interest’ for ‘Processing’ your ‘Personal Data’ is as follows:</p>
 
               <ul>
+
                 <li>I keep a diary as a permanent attendance register, which records all appointments to keep a record of when you were treated for tax purposes and to secure potential evidence in the event of a criminal prosecution, civil litigation, insurance claim or complaint to my regulatory body, the British Acupuncture Council.</li>
+
+                <li>Collecting your name, address, mobile and landline telephone numbers and email addresses to make and rearrange appointments or if contact is needed. Your email or text numbers may be used to forward information which may be useful or interesting to you.</li>
+
+                <li>Collecting and recording health data (‘Special Category Data’), date of birth and other personal information (which may include family history) including reviews and details of progress and clinical findings of your case, is to enable a full traditional diagnosis, treatment strategy and planning to be made and appropriate treatment to be administered and to secure evidence in the event of criminal proceedings, civil litigation, an insurance claim or complaint.</li>
+
+                <li>Date of Birth is also for identification purposes.</li>
+
+                <li>Your GP’s name and contact details are required in case I need to contact your GP, including in an emergency, and because it is a mandatory requirement in the British Acupuncture Council’s Code of Professional Conduct.</li>
+
+                <li>I record any information and advice that I have given, especially when referring patients to any other health professionals, to ensure you to receive the most appropriate treatment and to secure evidence in the event of criminal proceedings, civil litigation, an insurance claim or complaint.</li>
+
+                <li>I may hold your email and telephone number (both landline and mobile) data on my mobile telephone to contact you about appointments (to arrange/rearrange) and to occasionally send you information, which I think might be of interest. I am unable to send or receive encrypted emails so any emails I send or receive may not be protected in transit. I will monitor any emails sent to me, including file attachments, for viruses or malicious software. You have a responsibility to ensure that any email you send me is within the bounds of the law.</li>
+
               </ul>
 
-              <p></p>
+              <p>I use a third party service (<a href = "lcn.com" class = "in_page_link">LCN.com</a>) to host my website. This site is hosted at <em>www.healingwellspring.co.uk</em> which is run by <a href = "lcn.com" class = "in_page_link">LCN.com</a> on UK based servers. <a href = "lcn.com" class = "in_page_link">LCN.com</a> uses <a href = "https://awstats.sourceforge.io" class = "in_page_link">AWStats</a> software to collect anonymous information about users' activity on the website, for example the number of users viewing pages on the site, to monitor and report on the effectiveness of the site and help me improve it. For more information about how <a href = "lcn.com" class = "in_page_link">LCN.com</a> ‘Processes’ data, please see <a href = "lcn.com/privacy" class = "in_page_link">www.lcn.com/privacy</a>.</p>
 
-              <p></p>
+              <p id = "in_page_text_highlight">How Is Your ‘Personal Data’ Shared?</p>
 
-              <p></p>
+              <p>Your ‘Personal Data’ will be treated as strictly confidential, and will only be shared:</p>
 
-              <p></p>
+              <ul>
 
-              <p></p>
+                <li>With named third parties with your explicit consent.</li>
 
-              <p></p>
+                <li>With the relevant authority such as the police or a court, if necessary for compliance with a legal obligation to which I am subject e.g. a court order.</li>
 
-              <p></p>
+                <li>With your doctor or the police if necessary to protect yours or another person’s life.</li>
 
-              <p></p>
+                <li>With the police or a Local Authority for the purpose of safeguarding children or vulnerable adults.</li>
 
-              <p></p>
+                <li>With my regulatory body, the British Acupuncture Council, or my insurance company, in the event of a complaint or insurance claim being brought against me.</li>
+
+                <li>My solicitor in the event of any investigation or legal proceedings being brought against me.</li>
+
+              </ul>
+
+              <p id = "in_page_text_highlight">How Is Your ‘Personal Data’ Stored?</p>
+
+              <p>I have a legal obligation to retain your records for a minimum 7 years after your most recent appointment (In the case of minors, records must be kept until the patient reaches the age of 25 (7 years after reaching the age of 18)), but after this period you can ask me to delete your records if you wish. I will retain your records so that I can provide you with the best possible care should you return at some future date and in case of legal claims or complaints.</p>
+
+              <p>Your records are stored on paper, in a locked cupboard. Your name and telephone numbers may be recorded in a paper diary. Access to my mobile telephone, for texts and email access, is by passcode.</p>
+
+              <p>You have the right to request a copy of your ‘Personal Data’ I hold and you can also ask me to correct any factual errors. Provided the legal minimum period has elapsed, you can also ask me to erase your records.</p>
 
             </div>
 
-            <div class = "consent_form_page_content">
+            <div id = "consent_form_page_content">
 
+              <p id = "in_page_text_highlight">Consent Form</p>
 
+              <p>This is the consent form page.</p>
 
             </div>
 

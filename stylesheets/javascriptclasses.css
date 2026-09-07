@@ -2,12 +2,15 @@
   display: none !important;
 }  
 
+.show {
+  display: flex !important;
+}
+
 .noscroll {
   overflow-y: hidden;
 }
 
 .document_selection {
   margin: 0 0 0 var(--general-margin-standard);
-  font-style: italic;
   list-style-type: disc;
 }

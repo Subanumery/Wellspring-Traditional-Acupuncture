@@ -24,7 +24,7 @@ main {
   align-self: center;
   justify-self: center;
   gap: var(--general-margin-standard);
-  max-width: 1200px;
+  width: 1200px;
   max-height: calc(100dvh - var(--header-desktop-height) - var(--footer-height));
   height: 100%;
 }

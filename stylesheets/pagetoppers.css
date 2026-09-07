@@ -40,7 +40,7 @@
   gap: var(--general-margin-standard);
   justify-self: left;
   justify-content: right;
-  margin: 0;
+  margin: var(--general-margin-standard) 0 0 0;
   padding: 0;
   width: 100%;
   font-weight: bold;
@@ -50,9 +50,7 @@
 }
 
 .document_title_container li:hover {
-  margin: 0 0 0 var(--general-margin-standard);
   font-style: italic;
-  list-style-type: disc;
   cursor: pointer;
 }
 
@@ -93,7 +91,6 @@
 
   .titlecard#contact {
     padding: var(--general-margin-standard);
-    
   }
 
   .titlecard#about_emma {
@@ -108,7 +105,6 @@
 
   .document_title_container {
     max-width: 300px;
-
   }
 
 }
