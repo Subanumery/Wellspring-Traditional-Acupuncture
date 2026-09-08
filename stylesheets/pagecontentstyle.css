@@ -75,10 +75,6 @@ ul {
   color: var(--highlight-blue);
 }
 
-.in_page_testimonial_link:hover {
-  font-style: italic;
-}
-
 .content_text p {
   margin: 0;
 }
