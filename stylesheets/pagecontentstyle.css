@@ -51,22 +51,17 @@ ul {
   padding: calc(var(--general-margin-standard) * 2) var(--general-margin-standard) var(--general-margin-standard) var(--general-margin-standard);
 }
 
-.content_text {
+.content_text, #infection_policy_page_content, #privacy_policy_page_content, #consent_form_page_content {
   display: flex;
   flex-direction: column;
   gap: var(--general-margin-standard);
   max-width: 800px;
-  padding: 0 var(--general-margin-standard);
+  padding: 0 2rem;
   text-align: justify;
 }
 
 #infection_policy_page_content, #privacy_policy_page_content, #consent_form_page_content {
   display: none;
-  flex-direction: column;
-  gap: var(--general-margin-standard);
-  max-width: 800px;
-  padding: 0 var(--general-margin-standard);
-  text-align: justify;
 }
 
 .document_link_container {
